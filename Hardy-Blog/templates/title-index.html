@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title%}
+  <title>标题索引 - {{ blog.name }}</title>
+{% endblock %}
+
+{% block main %}
+
+<header>
+  <h3>标题索引 - {{ blog.name }}</h3>
+</header>
+
+<div id="back-home"><a href="index.html">&lt;&lt; Home</a></div>
+
+<div id="title-index-list">
+  {% for item in indexes %}
+  <div class="TitleIndexItem">
+    <a href="#{{item.id}}">{{item.name}}</a>
+  </div>
+  {% endfor %}
+</div>
+
+<div id="title-indexes">
+  {% for item in indexes %}
+  <h3 id="{{item.id}}">{{ item.name }}</h3>
+  <ul>
+    {% for art in item.articles %}
+    <li><a href="{{art.id}}.html">{{art.title}}</a></li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>
+
+{% endblock %}
