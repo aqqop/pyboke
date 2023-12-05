@@ -35,7 +35,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Copy files
         run: |         # 创建 docs 文件夹（如果不存在）
-          git mv Hardy-Blog/output/* docs/
+          git mv hardy-blog/output/* docs/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
