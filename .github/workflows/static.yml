@@ -34,6 +34,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Copy files
+        # 把 hardy-blog/output 下的文件复制到一个临时文件夹
         run: |
           mkdir temp &&
           cp -r hardy-blog/output/* temp/
