@@ -34,7 +34,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Copy files
-          run: |
+        run: |
           mkdir temp &&
           cp -r hardy-blog/output/* temp/
       - name: Upload artifact
