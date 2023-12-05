@@ -34,13 +34,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Copy files
-        run: |         # 创建 docs 文件夹（如果不存在）
-          git mv hardy-blog/output/* docs/
+        run: |
+        mkdir temp
+        cp -r hardy-blog/output/* temp/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload files from hardy-blog/output
-          path: hardy-blog/output/*
+          path: temp/
           # Set the name for the uploaded artifact
           name: hardy-blog
       - name: Deploy to GitHub Pages
