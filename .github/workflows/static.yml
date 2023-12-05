@@ -49,4 +49,4 @@ jobs:
         uses: actions/deploy-pages@v3
         with:
           # 注意：这里的 artifact 参数应该与你上传时的名称一致
-          artifact: hardy-blog
+          artifact_name: hardy-blog
