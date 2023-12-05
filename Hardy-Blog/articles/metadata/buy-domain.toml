@@ -35,10 +35,7 @@ pairs = [
 ]
 
 # 文章预览，自动生成，后续可手动修改，会出现在 index 页面
-abstract = '''author: "Hardy.Jo"
-published: 2023-11-28
-tags: Blog
-
+abstract = '''
 首先在网上搜索了一轮教程，最后决定在NameSilo上面购买，大家都说有WHOIS的隐私保护，默认就有，还免费的，挺多人推荐的。
 下面是地址：
 https://www.name...'''

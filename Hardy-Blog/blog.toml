@@ -32,7 +32,7 @@ website = '''在此填写博客网址'''
 rss_link = ''''''
 
 # [手动修改无效] 当前主题 (CSS)
-current_theme = 'mvp'
+current_theme = 'new'
 
 # [一般不手动修改] 用于 RSS feed 的 uuid
 uuid = 'c607fba60af43cad612c4244dd58c21ac7c1840e'
