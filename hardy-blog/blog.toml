@@ -23,22 +23,22 @@ img_prefix = ''''''
 img_max_width = '100%'
 
 # [可暂时不填，但正式发布博客到网上时必填] 博客网址，用于 RSS feed
-website = '''https://chinjo.top/pyboke/'''
+website = '''在此填写博客网址'''
 
 # 请填写以上项目
 # 以下项目一般由程序自动填写，不需要手动操作
 
 # RSS feed 的网址 [一般根据 website 自动生成]
-rss_link = '''https://chinjo.top/pyboke/atom.xml'''
+rss_link = ''''''
 
 # [手动修改无效] 当前主题 (CSS)
 current_theme = 'simple'
 
 # [一般不手动修改] 用于 RSS feed 的 uuid
-uuid = '683e583b8eebdead6cd6a0af8f7af3f5cf1bd20c'
+uuid = 'c607fba60af43cad612c4244dd58c21ac7c1840e'
 
 # [一般不手动修改] 上次生成 RSS feed 的时间
 rss_updated = ''
 
 # [一般不手动修改] 博客更新日期，如果大于 rss_updated 就要重新生成 RSS
-blog_updated = '2023-12-05 09:53:18+08:00'
+blog_updated = '2023-12-04 12:31:17+08:00'

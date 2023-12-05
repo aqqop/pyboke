@@ -1,7 +1,4 @@
-# 记录一次购买域名的过程
-
 ---
-title: 记录一次购买域名的过程
 author: "Hardy.Jo"
 published: 2023-11-28
 tags: Blog
@@ -9,7 +6,7 @@ tags: Blog
 首先在网上搜索了一轮教程，最后决定在NameSilo上面购买，大家都说有WHOIS的隐私保护，默认就有，还免费的，挺多人推荐的。
 
 下面是地址：
-bu
+
 https://www.namesilo.com/?rid=d27fa32do
 
 买了之后，需要进行域名解析，这部分操作我放到cloudflare上操作，比较简单，提示也挺充分的，比较顺畅就设置好了。
