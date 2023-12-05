@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="{{parent_dir}}theme.css" />
+    <link rel="stylesheet" href="{{parent_dir}}style.css" />
+
+    {% block title %}
+    <title>{{ blog.name }}</title>
+    {% endblock %}
+
+    {% block style %}
+    <style>
+    img {
+      max-width: {{ blog.img_max_width }} !important;
+      height: auto !important;
+    }
+    </style>
+    {% endblock %}
+
+  </head>
+  <body>
+    {% block header %}{% endblock %}
+    <main>{% block main %}{% endblock %}</main>
+    {% block footer %}{% endblock %}
+  </body>
+
+  {% block script %}{% endblock %}
+</html>
