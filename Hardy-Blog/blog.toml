@@ -32,7 +32,7 @@ website = '''在此填写博客网址'''
 rss_link = ''''''
 
 # [手动修改无效] 当前主题 (CSS)
-current_theme = 'simple'
+current_theme = 'mvp'
 
 # [一般不手动修改] 用于 RSS feed 的 uuid
 uuid = 'c607fba60af43cad612c4244dd58c21ac7c1840e'
@@ -41,4 +41,4 @@ uuid = 'c607fba60af43cad612c4244dd58c21ac7c1840e'
 rss_updated = ''
 
 # [一般不手动修改] 博客更新日期，如果大于 rss_updated 就要重新生成 RSS
-blog_updated = '2023-12-05 13:30:01+08:00'
+blog_updated = '2023-12-05 13:32:26+08:00'
