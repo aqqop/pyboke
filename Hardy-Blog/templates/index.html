@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block main %}
+<header>
+  <h1>{{ blog.name }}</h1>
+</header>
+
+<h3>Recent articles</h3>
+<ul>
+  {% for art in articles %}
+  <li>
+    <a href="{{art.id}}.html">{{art.title}}</a>
+    <span style="float: right; font-size: 0.8em; color: #888;">{{ art.ctime[:10] }}</span>
+    <p style="clear: both;">{{ art.abstract }}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+<h3>Archives</h3>
+<p>
+  <div id="archives">
+    <a href="title-index.html">TitleIndex</a>
+    <a href="years.html">Years</a>
+    <a href="random.html">Random</a>
+  </div>
+</p>
+
+{% endblock %}
+
+{% block footer %}
+<div id="footer" class="index-footer">
+  <p id="footer-body">
+    Author: {{ blog.author }}
+    | LICENSE <a href="LICENSE.txt">CC0-1.0</a>
+    | RSS <a href="atom.xml">atom.xml</a>
+    | Powered by <a href="https://github.com/ahui2016/pyboke">PyBoke</a>
+  </p>
+</div>
+{% endblock %}

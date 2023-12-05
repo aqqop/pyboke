@@ -1,0 +1,47 @@
+# 本文件采用 TOML 格式 https://toml.io/
+
+# 文章标题 [请勿手动修改，会自动获取]
+title = '''{{art.title}}'''
+
+# 文章作者 [通常留空，自动等同于博客作者]
+author = '''{{art.author}}'''
+
+# 文章创建时间
+ctime = '{{art.ctime}}'
+
+# 文章修改时间
+mtime = '{{art.mtime}}'
+
+# sha1, 用来判断文章内容有无变更 [请勿手动修改]
+checksum = '{{art.checksum}}'
+
+# 是否忽略文章 (true/false)
+# 被忽略的文章不会出现在最近列表、索引列表里，但仍会出现在 RSS 里
+ignored = {{art.ignored|string|lower}}
+
+# HTML中的图片的最大宽度 (留空表示跟随总设定)
+img_width = '{{art.img_width}}'
+
+# 是否执行自动替换 (0:跟随总设定, -1:不执行, 1:执行)
+replace = {{art.replace}}
+
+# 自动替换。例:
+# pairs =  [
+#   [ '''../output/pics/abc.jpg''', '''https://example.com/abc.jpg''' ],
+#   [ '''../output/pics/def.jpg''', '''https://example.com/def.jpg''' ],
+# ]
+pairs = [
+{% for pair in art.pairs %}
+  [
+    {%- for item in pair -%}
+    '''{{item}}''',
+    {%- endfor -%}
+  ],
+{% endfor %}
+]
+
+# 文章预览，自动生成，后续可手动修改，会出现在 index 页面
+abstract = '''{{art.abstract}}'''
+
+#  文章总结 (留空表示无总结)，需手动填写，总结会出现在文章页首
+summary = '''{{art.summary}}'''

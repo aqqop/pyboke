@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title%}
+  <title>{{ art.title }} - {{ blog.name }}</title>
+{% endblock %}
+
+{% block style %}
+  <style>
+  img {
+    {% if art.img_width|length %}
+    max-width: {{ art.img_width }} !important;
+    {% else %}
+    max-width: {{ blog.img_max_width }} !important;
+    {% endif %}
+    height: auto !important;
+  }
+  </style>
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block main %}
+
+{% if art.summary %}
+<div class="post-ai">
+    <div class="ai-title">
+        <div class="ai-title-text">Summary</div>
+    </div>
+
+    <div class="ai-explanation ai-explanation-content">
+        {{ art.summary }}
+    </div>
+</div>
+{% endif %}
+
+{{ art.content|safe }}
+
+<div id="updated-at">
+  <span>Updated at {{ art.mtime[0:19] }}</span><br>
+  <span>Created at {{ art.ctime[0:19] }}</span>
+</div>
+
+<style>
+.left { float: left; }
+.right { float: right; }
+</style>
+
+{% if art.prev %}
+<div class="left">
+  <a href="{{ art.prev.id }}.html">Previous: {{ art.prev.title }}</a>
+</div>
+{% endif %}
+{% if art.next %}
+<div class="right">
+  <a href="{{ art.next.id }}.html">Next: {{ art.next.title }}</a>
+</div>
+{% endif %}
+<div style="clear: both;"></div>
+{% endblock %}
+
+{% block footer %}
+<div id="footer">
+  <div id="footer-home-link">
+    <a href="index.html">&lt;&lt; Home</a>
+    {% if not art.ignored %}
+    <a href="title-index.html#{{art.index_id}}">&lt;&lt; Index</a>
+    |
+    <a href="random.html">Random &gt;&gt;</a>
+    {% endif %}
+  </div>
+  <p id="footer-body">
+    {% if art.author|length %}
+    Author: {{ art.author }}
+    {% else %}
+    Author: {{ blog.author }}
+    {% endif %}
+    | LICENSE <a href="LICENSE.txt">CC0-1.0</a>
+    | RSS <a href="atom.xml">atom.xml</a>
+    | Powered by <a href="https://github.com/ahui2016/pyboke">PyBoke</a>
+  </p>
+</div>
+{% endblock %}
