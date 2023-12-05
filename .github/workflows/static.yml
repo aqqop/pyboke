@@ -39,8 +39,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload entire repository
-          path: '../../*'
+          # Upload files from hardy-blog/output
+          path: hardy-blog/output/*
+          # Set the name for the uploaded artifact
+          name: hardy-blog
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
