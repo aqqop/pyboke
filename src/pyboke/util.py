@@ -64,6 +64,13 @@ def init_blog():
 
 
 def blog_file_folders_exist():
+    print(f"{Drafts_Folder_Path.exists()} ")
+    print(f"{Articles_Folder_Path.exists()} ")
+    print(f"{Pics_Folder_Path.exists()} ")
+    print(f"{Metadata_Folder_Path.exists()} ")
+    print(f"{Output_Folder_Path.exists()} ")
+    print(f"{Templates_Folder_Path.exists()} ")
+    print(f"{Blog_Config_Path.exists()} ")
     return Drafts_Folder_Path.exists()\
         and Articles_Folder_Path.exists()\
         and Pics_Folder_Path.exists()\
